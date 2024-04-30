@@ -21,9 +21,13 @@ const Registration = () => {
   const handleSubmitForm = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`https://uce-lms-backend.onrender.com/api/v1/register`, formData);
-      console.log(response);
-      setFormData('')
+      await axios.post(`https://uce-lms-backend.onrender.com/api/v1/register`, formData);
+      setFormData({
+        Name: '',
+        Roll_NO: '',
+        Branch: '',
+        Date_Of_admission: ''
+      });
     } catch (error) {
       console.error('Error during registration:', error);
      
