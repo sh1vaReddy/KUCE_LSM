@@ -23,10 +23,10 @@ const Registration = () => {
     try {
       const response = await axios.post(`https://uce-lms-backend.onrender.com/api/v1/register`, formData);
       console.log(response);
-      // Handle success
+      setFormData('')
     } catch (error) {
       console.error('Error during registration:', error);
-      // Handle error
+     
     }
   };
   
