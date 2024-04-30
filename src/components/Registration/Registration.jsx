@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import LibraryImage from '../../assets/register.jpeg';
+import axios from 'axios';
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -17,10 +18,18 @@ const Registration = () => {
     });
   };
 
-  const handleSubmitForm = (e) => {
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
-  
+    try {
+      const response = await axios.post(`https://uce-lms-backend.onrender.com/api/v1/register`, formData);
+      console.log(response);
+      // Handle success
+    } catch (error) {
+      console.error('Error during registration:', error);
+      // Handle error
+    }
   };
+  
 
   return (
     <div style={{ backgroundImage: `url(${LibraryImage})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
