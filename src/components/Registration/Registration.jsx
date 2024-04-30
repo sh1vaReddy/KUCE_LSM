@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import LibraryImage from '../../assets/register.jpeg';
 import axios from 'axios';
+import {toast} from 'react-toastify'  
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -22,12 +23,14 @@ const Registration = () => {
     e.preventDefault();
     try {
       await axios.post(`https://uce-lms-backend.onrender.com/api/v1/register`, formData);
+      toast.success("Sucessfully Register");
       setFormData({
         Name: '',
         Roll_NO: '',
         Branch: '',
         Date_Of_admission: ''
       });
+    
     } catch (error) {
       console.error('Error during registration:', error);
      
