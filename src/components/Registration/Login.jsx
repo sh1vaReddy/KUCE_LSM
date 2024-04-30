@@ -16,7 +16,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post(`http://localhost:8000/api/v1/login`, { Roll_No: rollNo });
+      const response = await axios.post(`https://uce-lms-backend.onrender.com/api/v1/login`, { Roll_No: rollNo });
       
       if (response.status !== 200) {
         throw new Error('Invalid response status');

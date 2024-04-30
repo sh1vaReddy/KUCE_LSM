@@ -17,7 +17,7 @@ const DeleteBook = () => {
   const handleInput = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:8000/api/v1/singlebook`,
+        `https://uce-lms-backend.onrender.com/api/v1/singlebook`,
         { BookId: bookid }
       );
 

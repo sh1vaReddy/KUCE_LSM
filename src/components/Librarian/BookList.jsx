@@ -10,7 +10,7 @@ const BookList = () => {
   useEffect(() => {
     async function fetchBooks() {
       try {
-        const response = await axios.get("http://localhost:8000/api/v1/book/details");
+        const response = await axios.get("https://uce-lms-backend.onrender.com/api/v1/book/details");
         setBooks(response.data.Book);
         setFilteredBooks(response.data.Book);
       } catch (error) {

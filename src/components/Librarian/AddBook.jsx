@@ -30,7 +30,7 @@ const AddBook = () => {
         toast.error("Please fill all fields");
         return;
       }
-      const response = await axios.post(`http://localhost:8000/api/v1/createBooks`, Bookreg);
+      const response = await axios.post(`https://uce-lms-backend.onrender.com/api/v1/createBooks`, Bookreg);
       console.log(response);
       toast.success("Book successfully created");
      

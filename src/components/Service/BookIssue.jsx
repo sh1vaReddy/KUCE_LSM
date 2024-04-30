@@ -15,7 +15,7 @@ const BookIssue = () => {
 
   const handleSerachBook = async () => {
     try {
-      const response = await axios.post("http://localhost:8000/api/v1/book", { BookId: bookId });
+      const response = await axios.post("https://uce-lms-backend.onrender.com/api/v1/book", { BookId: bookId });
       if (response.data.success) {
         setBookDetails(response.data.book);
       } else {
