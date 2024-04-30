@@ -4,12 +4,15 @@ import Cse from "../../assets/Cse.jpg";
 import It from "../../assets/IT.jpeg";
 import EEE from "../../assets/EEE.jpg";
 import ECE from "../../assets/ECE.jpeg";
+import principla from '../../assets/principal.jpg'
+import Register from '../../assets/Register.jpg';
+import vc from '../../assets/vc.jpg'
 const Home = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200">
+      <div className="flex flex-col items-center justify-center bg-gray-200 rounded-lg overflow-hidden shadow-md mb-8">
         <img
-          className="w-full object-cover rounded-lg shadow-lg opacity-100"
+          className="w-full h-auto object-cover"
           src={KUCE}
           alt="University College of Engineering"
         />
@@ -91,17 +94,28 @@ const Home = () => {
       <div className="container mx-auto py-8 px-4 ">
     <h1 className="text-3xl font-bold mb-4">Administration</h1>
     <div className="flex flex-wrap justify-evenly">
-        <div className="flex flex-col items-center mr-8 mb-8">
-            <p className="text-3xl font-bold mb-2">Dr. T. Jaganmohan Raju</p>
-            <p>Principal</p>
+    <div className="flex flex-col items-center mb-8">
+          <img src={vc}   className="rounded-lg h-[150px]"/>
+            <p className="text-3xl font-bold mb-2">Prof. T. Ramesh</p>
+            <p>Vice-Chancellor</p>
         </div>
+        
         <div className="flex flex-col items-center mr-8 mb-8">
+          <img
+          src={Register}
+          className="rounded-lg h-[150px]"
+          />
             <p className="text-3xl font-bold mb-2">Prof. Malla Reddy Perati</p>
             <p>Registrar</p>
         </div>
-        <div className="flex flex-col items-center mb-8">
-            <p className="text-3xl font-bold mb-2">Prof. T. Ramesh</p>
-            <p>Vice-Chancellor</p>
+        
+        <div className="flex flex-col items-center mr-8 mb-8">
+          <img
+          src={principla}
+          className="rounded-lg h-[150px]"
+          />
+            <p className="text-3xl font-bold mb-2">Dr. T. Jaganmohan Raju</p>
+            <p>Principal</p>
         </div>
     </div>
 </div>

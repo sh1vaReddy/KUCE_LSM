@@ -1,9 +1,9 @@
 import { IoHome, IoLibrary} from "react-icons/io5";
 import { PiStudentBold } from "react-icons/pi";
 import { RiContactsFill } from "react-icons/ri";
-import { FcAbout } from "react-icons/fc";
 import { GrServices } from "react-icons/gr";
 import { Link } from "react-router-dom";
+import { IoIosInformationCircle } from "react-icons/io";
 
 const NavBar = () => {
   return (
@@ -18,11 +18,11 @@ const NavBar = () => {
           </Link>
           <Link to='/about'>
           <p className="text-lg font-semibold flex items-center">
-          <FcAbout className="mr-2"/> 
+          <IoIosInformationCircle className="mr-2"/> 
           About
           </p>
           </Link>
-          <Link to='/service'>
+          <Link to='/login'>
           <p className="text-lg font-semibold flex items-center">
           <GrServices  className="mr-2"/>
             Services</p>

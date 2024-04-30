@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import LibraryImage from '../../assets/Library.jpg';
+import LibraryImage from '../../assets/register.jpeg';
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -19,12 +19,12 @@ const Registration = () => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+  
   };
 
   return (
     <div style={{ backgroundImage: `url(${LibraryImage})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <form onSubmit={handleSubmitForm} className="w-full max-w-md mx-auto p-8 bg-white rounded-lg shadow-md">
+      <form onSubmit={handleSubmitForm} className="w-full max-w-md mx-auto p-8 b rounded-lg shadow-md " style={{ backdropFilter: 'blur(100px)', opacity: 0.9 }}>
         <h2 className="text-2xl font-semibold mb-4 text-center">Registration Form</h2>
         <div className="mb-4">
           <label htmlFor="Name" className="block text-sm font-semibold text-gray-600">Name:</label>

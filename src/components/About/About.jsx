@@ -1,4 +1,4 @@
-import about from '../../assets/About.jpg';
+import about from '../../assets/about cover.jpg';
 
 const About = () => {
   return (
@@ -6,7 +6,7 @@ const About = () => {
       <div className="max-w-screen-xl mx-auto px-4 py-8">
         <div className="flex flex-col items-center justify-center bg-gray-200 rounded-lg overflow-hidden shadow-md mb-8">
           <img
-            className="w-full h-auto object-cover"
+            className="w-full h-[800px] object-cover"
             src={about}
             alt="University College of Engineering"
           />
