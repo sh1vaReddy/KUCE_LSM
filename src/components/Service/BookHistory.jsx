@@ -44,13 +44,13 @@ const BookHistory = () => {
       }}
     />
     <div className="max-w-screen-lg mx-auto p-6 bg-white shadow-md rounded-md  backdrop-filter backdrop-blur-sm bg-opacity-30" style={{ zIndex: 1 }}>
-      <h1 className="text-2xl font-bold mb-4">Issued Books List</h1>
+      <h1 className="text-2xl font-bold mb-4">Book's List</h1>
       <div className='flex justify-center '> 
         <button
           onClick={handleFetchBooks}
           className="bg-blue-500 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
         >
-          Fetch Issued Books
+           History
         </button>
       </div>
       <div>
