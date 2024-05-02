@@ -58,7 +58,18 @@ const BookList = () => {
         }} className="px-4 py-2 bg-gray-200 rounded-md">Filter by Roll Number</button>
       </div>
       <table className="min-w-full divide-y divide-gray-200">
+      <thead className="bg-white divide-y divide-gray-200">
+              <tr>
+                <th className="px-6 py-4 whitespace-nowrap">Book ID</th>
+                <th className="px-6 py-4 whitespace-nowrap">Book Title</th>
+                <th className="px-6 py-4 whitespace-nowrap">Issued to</th>
+                <th className="px-6 py-4 whitespace-nowrap ">Issue Date</th>
+                <th className="px-6 py-4 whitespace-nowrap ">Excepted Date</th>
+                <th className="px-6 py-4 whitespace-nowrap ">Return Date</th>
+              </tr>
+            </thead>
         <tbody className="bg-white divide-y divide-gray-200">
+        
           {filteredBooks.map(book => (
             <tr key={book._id}>
               <td className="px-6 py-4 whitespace-nowrap">{book.Book_Id}</td>
