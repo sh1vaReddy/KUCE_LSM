@@ -11,10 +11,10 @@ const BookHistory = () => {
 
   const handleFetchBooks = async () => {
     try {
-      const response = await axios.post(`https://uce-lms-backend.onrender.com/api/v1/history`, { Roll_NO });
+      const response = await axios.post(`https://uce-lms-backend.onrender.com/api/v1/book/details/rollno`, { Roll_NO });
       console.log(response.data);
-      if (response.data.book) {
-        setBooks(response.data.book);
+      if (response.data.Bookhistory) {
+        setBooks(response.data.Bookhistory);
       } else {
         setBooks([]);
       }
@@ -40,9 +40,10 @@ const BookHistory = () => {
         backgroundImage: `url(${Serach})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        filter:`blur(3px)`,
       }}
     />
-    <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md  backdrop-filter backdrop-blur-sm bg-opacity-30" style={{ zIndex: 1 }}>
+    <div className="max-w-screen-lg mx-auto p-6 bg-white shadow-md rounded-md  backdrop-filter backdrop-blur-sm bg-opacity-30" style={{ zIndex: 1 }}>
       <h1 className="text-2xl font-bold mb-4">Issued Books List</h1>
       <div className='flex justify-center '> 
         <button
@@ -54,22 +55,26 @@ const BookHistory = () => {
       </div>
       <div>
         {books.length > 0 ? (
-          <table className="w-full border-collapse">
-            <thead>
+          <table className="min-w-full divide-y divide-gray-200">
+            <thead className='bg-white divide-y divide-gray-200'>
               <tr>
-                <th className="py-2 px-4 border border-gray-400">Book ID</th>
-                <th className="py-2 px-4 border border-gray-400">Date of Issue</th>
-                <th className="py-2 px-4 border border-gray-400">Issued to</th>
-                <th className="py-2 px-4 border border-gray-400">Expcet Date</th>
+              <th className="px-6 py-4 whitespace-nowrap">Book ID</th>
+                <th className="px-6 py-4 whitespace-nowrap">Book Title</th>
+                <th className="px-6 py-4 whitespace-nowrap">Issued to</th>
+                <th className="px-6 py-4 whitespace-nowrap ">Issue Date</th>
+                <th className="px-6 py-4 whitespace-nowrap ">Expected Date</th>
+                <th className="px-6 py-4 whitespace-nowrap ">Return Date</th>
               </tr>
             </thead>
             <tbody>
               {books.map((book, index) => (
                 <tr key={index}>
-                  <td className="py-2 px-4 border border-gray-400">{book.BookId} </td>
-                  <td className="py-2 px-4 border border-gray-400">{formatDate(book.Date_of_Issue)}</td>
-                  <td className="py-2 px-4 border border-gray-400">{book.student}</td>
-                  <td className="py-2 px-4 border border-gray-400">{formatDate(book.Date_of_Return)}</td>
+                  <td className="py-2 px-4 border border-gray-400">{book.Book_Id} </td>
+                  <td className="py-2 px-4 border border-gray-400">{book.Book_Title}</td>
+                  <td className="py-2 px-4 border border-gray-400">{book.ROll_No}</td>
+                  <td className="py-2 px-4 border border-gray-400">{formatDate(book.Issue_Date)}</td>
+                  <td className="py-2 px-4 border border-gray-400">{formatDate(book.Excepted_Date)}</td>
+                  <td className="py-2 px-4 border border-gray-400">{formatDate(book.return_Date)}</td>
                 </tr>
               ))}
             </tbody>
