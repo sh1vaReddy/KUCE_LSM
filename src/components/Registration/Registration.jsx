@@ -32,6 +32,7 @@ const Registration = () => {
       });
     
     } catch (error) {
+      toast.error("Student Not Found");
       console.error('Error during registration:', error);
      
     }

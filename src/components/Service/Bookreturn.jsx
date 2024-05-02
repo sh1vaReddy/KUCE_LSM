@@ -26,7 +26,7 @@ function Bookreturn() {
 
   const handlereturn = async (bookId) => {
     try {
-      const response = await axios.post('http://localhost:8000/api/v1/return', { BookId: bookId, Roll_No: Roll_NO });
+      const response = await axios.post('https://uce-lms-backend.onrender.com/api/v1/return', { BookId: bookId, Roll_No: Roll_NO });
       console.log(response);
       
     } catch (error) {
@@ -71,7 +71,7 @@ function Bookreturn() {
                   <th className="py-2 px-4 border border-gray-400">Book ID</th>
                   <th className="py-2 px-4 border border-gray-400">Date of Issue</th>
                   <th className="py-2 px-4 border border-gray-400">Issued to</th>
-                  <th className="py-2 px-4 border border-gray-400">Date of Return</th>
+                  <th className="py-2 px-4 border border-gray-400">Expcet Date</th>
                   <th className="py-2 px-4 border border-gray-400">Return</th>
                 </tr>
               </thead>
