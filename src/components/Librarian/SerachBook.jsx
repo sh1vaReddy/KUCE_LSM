@@ -5,16 +5,16 @@ import { FaSearchPlus } from "react-icons/fa";
 import addbooks from  '../../assets/Bookserach.jpeg'
 
 const BookHistory = () => {
-  const [bookid, setBookId] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   const [bookDetails, setBookDetails] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
 
   const handleInput = async () => {
     try {
-      const response = await axios.post("https://uce-lms-backend.onrender.com/api/v1/book", { BookId: bookid });
+      const response = await axios.post("http://localhost:8000/api/v1//book", { searchTerm });
 
-      if (!response.data) {
-        setErrorMessage('No book found.');
+      if (!response.data.success) {
+        setErrorMessage(response.data.message);
         setBookDetails(null);
       } else {
         const book = response.data.book;
@@ -83,14 +83,14 @@ const BookHistory = () => {
     >
       <h2 className="text-2xl font-bold mb-4">Search a Book</h2>
       <div className="mb-4">
-        <label className="block text-sm font-semibold mb-1">Book ID:</label>
+        <label className="block text-sm font-semibold mb-1">Book ID or Name:</label>
         <input
-          id="bookId"
+          id="searchTerm"
           type="text"
-          value={bookid}
-          onChange={(e) => setBookId(e.target.value)}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-          placeholder="Enter Book ID"
+          placeholder="Enter Book ID or Name"
         />
       </div>
       <button onClick={handleInput} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-200 inline-flex items-center">
