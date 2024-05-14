@@ -45,7 +45,7 @@ const BookList = () => {
         filter:`blur(1px)`
       }}
     />
-    <div className="max-w-4xl mx-auto  backdrop-filter backdrop-blur-sm bg-opacity-10">
+    <div className="max-w-4xl mx-auto  backdrop-filter backdrop-blur-sm bg-opacity-10" >
       <h2 className="text-2xl font-bold mb-4">Book's Details</h2>
       <div className="flex flex-wrap gap-4">
         <button onClick={() => setFilteredBooks(books)} className="px-4 py-2 bg-gray-200 rounded-md">Clear Filters</button>

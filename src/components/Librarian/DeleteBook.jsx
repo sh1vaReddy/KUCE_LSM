@@ -65,7 +65,7 @@ const DeleteBook = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-8 p-6  bg-white shadow-md rounded-md text-center">
+    <div className="max-w-md mx-auto mt-8 p-6  bg-white shadow-md rounded-md text-center" style={{ backgroundColor: 'rgba(244, 241, 235, 0.7)' }}>
       <h2 className="text-2xl font-bold mb-4">Search a Book</h2>
       <div className="mb-4">
         <label className="block text-sm font-semibold mb-1">Book ID:</label>

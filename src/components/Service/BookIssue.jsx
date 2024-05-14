@@ -57,8 +57,8 @@ const BookIssue = () => {
         backgroundPosition: 'center',
       }}
     />
-    <div className="flex justify-center items-center h-screen ">
-      <div className="max-w-lg p-6 shadow-md rounded-md backdrop-filter backdrop-blur-md bg-opacity-10">
+    <div className="flex justify-center items-center h-screen " >
+      <div className="max-w-lg p-6 shadow-md rounded-md backdrop-filter backdrop-blur-md bg-opacity-10" style={{ backgroundColor: 'rgba(244, 241, 235, 0.7)' }}>
         <h2 className="text-xl font-bold mb-4">Create Book Issue</h2>
         <div className="mb-4">
           <label className="block text-sm font-semibold mb-1" htmlFor="bookId">Book ID:</label>

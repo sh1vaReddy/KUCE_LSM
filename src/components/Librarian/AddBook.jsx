@@ -64,7 +64,9 @@ const AddBook = () => {
       }}
     />
     <div className="">
-    <form className="w-full max-w-lg mx-auto  p-8 bg-white rounded-lg shadow-md overflow-y-auto backdrop-filter backdrop-blur-sm bg-opacity-10" onSubmit={handleBookRegister} >
+    <form className="w-full max-w-lg mx-auto  p-8 bg-white rounded-lg shadow-md overflow-y-auto backdrop-filter backdrop-blur-sm bg-opacity-10" onSubmit={handleBookRegister} 
+     style={{ backgroundColor: 'rgba(244, 241, 235, 0.7)' }}
+    >
         <div className="mb-4">
           <label htmlFor="Book_ID" className="block text-sm font-semibold text-gray-600">Book ID:
           <input type="text" id="Book_ID" name="Book_ID" placeholder="Enter Book Id" onChange={handleInputChange} className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />

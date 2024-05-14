@@ -53,7 +53,7 @@ function Bookreturn() {
           backgroundPosition: 'center',
         }}
       />
-      <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md  backdrop-filter backdrop-blur-sm bg-opacity-30" style={{ zIndex: 1 }}>
+      <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md  backdrop-filter backdrop-blur-sm bg-opacity-30" style={{ zIndex: 1 ,backgroundColor: 'rgba(244, 241, 235, 0.7)' }}>
         <h1 className="text-2xl font-bold mb-4">Issued Books List</h1>
         <div className='flex justify-center '> 
           <button

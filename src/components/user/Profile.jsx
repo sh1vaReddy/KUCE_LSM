@@ -26,9 +26,9 @@ const Profile = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen relative">
+    <div className="flex justify-center items-center h-screen relative" >
       <div className="absolute inset-0 bg-no-repeat bg-cover bg-center filter blur-sm" style={{ backgroundImage: `url(${profile})` }}></div>
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen" >
       <div className="max-w-md  bg-opacity-25  border border-gray-300 rounded-md p-6  backdrop-filter backdrop-blur-3xl">
         <p className="text-gray-200 mb-4">
           <span className="text-white font-semibold">Name:</span> {Name}

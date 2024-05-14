@@ -47,7 +47,7 @@ const Contact = () => {
           zIndex: -1 
         }}
       />
-      <div className="bg-opacity-5 backdrop-filter backdrop-blur-md rounded-lg p-16 shadow-md">
+      <div className="bg-opacity-5 backdrop-filter backdrop-blur-md rounded-lg p-16 shadow-md"       style={{ backgroundColor: 'rgba(244, 241, 235, 0.7)' }}>
         <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Contact Us</h2>
         <form onSubmit={handleSubmit} className="space-y-4 w-full">
           <div className="flex flex-col">

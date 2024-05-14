@@ -76,10 +76,11 @@ const BookHistory = () => {
         backgroundImage: `url(${addbooks})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        filter:`blur(8px)`
       }}
     />
-    <div className="max-w-md mx-auto  p-6  bg-white shadow-md rounded-md text-center backdrop-filter backdrop-blur-sm bg-opacity-10">
+    <div className="max-w-md mx-auto  p-6  bg-white shadow-md rounded-md text-center backdrop-filter backdrop-blur-sm bg-opacity-10"
+    style={{ backgroundColor: 'rgba(244, 241, 235, 0.7)' }}
+    >
       <h2 className="text-2xl font-bold mb-4">Search a Book</h2>
       <div className="mb-4">
         <label className="block text-sm font-semibold mb-1">Book ID:</label>

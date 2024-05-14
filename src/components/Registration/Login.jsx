@@ -56,7 +56,8 @@ const Login = () => {
           zIndex: -1 
         }}
       />
-      <div className="bg-white bg-opacity-50 backdrop-filter backdrop-blur-lg shadow-lg rounded-lg p-8 max-w-md w-full">
+      <div className="bg-white bg-opacity-50 backdrop-filter backdrop-blur-lg shadow-lg rounded-lg p-8 max-w-md w-full "  style={{ backgroundColor: 'rgba(244, 241, 235, 0.7)' }}
+      >
         <h1 className="text-2xl mb-4 text-center">Student Login</h1>
         <input
           type="text"

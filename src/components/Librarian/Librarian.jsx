@@ -15,7 +15,7 @@ const Librarian = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen relative">
+    <div className="flex justify-center items-center h-screen relative" style={{ backgroundColor: 'rgba(244, 241, 235, 0.7)' }}>
       <div className="absolute inset-0 bg-no-repeat bg-cover bg-center filter blur-sm" style={{ backgroundImage: `url(${LibraryImage})` }}></div>
       <div className="p-8 rounded-lg shadow-md relative z-10 opacity-90 backdrop-filter backdrop-blur-3xl">
         <h2 className="text-2xl font-semibold mb-4">Librarian Dashboard</h2>
@@ -31,9 +31,6 @@ const Librarian = () => {
     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:ring focus:ring-blue-200">Book's Details</button>
   </Link>
 </div>
-
-          
-          
           
         </div>
       </div>
