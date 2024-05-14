@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import bookreturn from '../../assets/Book return.jpeg'
-
+import {toast} from 'react-toastify'
 
 function Bookreturn() {
   const [books, setBooks] = useState([]);
@@ -13,7 +13,7 @@ function Bookreturn() {
   const handleFetchBooks = async () => {
     try {
       const response = await axios.post(`https://uce-lms-backend.onrender.com/api/v1/history`, { Roll_NO });
-      console.log(response.data);
+      
       if (response.data.book) {
         setBooks(response.data.book);
       } else {
@@ -28,9 +28,13 @@ function Bookreturn() {
     try {
       const response = await axios.post('https://uce-lms-backend.onrender.com/api/v1/return', { BookId: bookId, Roll_No: Roll_NO });
       console.log(response);
+      toast.success("Sucefully return")
+      if (response.data.success) {
+        window.location.reload();
+      }
       
     } catch (error) {
-      console.error('Error returning book:', error);
+      toast.error('Error returning book:');
     }
   };
 

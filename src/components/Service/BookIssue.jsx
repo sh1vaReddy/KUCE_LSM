@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import Issue from '../../assets/Book Issue.jpeg';
+import {toast} from 'react-toastify'
 
 const BookIssue = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,13 +17,14 @@ const BookIssue = () => {
   const handleSearchBook = async () => {
     try {
       const response = await axios.post("https://uce-lms-backend.onrender.com/api/v1/book", { searchTerm, searchType });
+      toast.success("Sucefully return")
       if (response.data.success) {
         setBookDetails(response.data.book);
       } else {
         setMessage(response.data.message);
       }
     } catch (error) {
-      console.error("Error:", error);
+      toast.error("Failed to fetch book details");
       setMessage('Failed to fetch book details');
     }
   };
