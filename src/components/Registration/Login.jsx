@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { setCredentials } from '../Redux/auth';
 import { useNavigate } from 'react-router-dom';
 import login from '../../assets/Login.jpg';
+import {toast} from 'react-toastify'  
 
 const Login = () => {
   const [rollNo, setRollNo] = useState('');
@@ -28,6 +29,7 @@ const Login = () => {
 
     } catch (error) {
       console.log(error);
+      toast.error("Student Not Found");
     }
   };
 

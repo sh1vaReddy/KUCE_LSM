@@ -11,7 +11,7 @@ const BookHistory = () => {
 
   const handleInput = async () => {
     try {
-      const response = await axios.post("http://localhost:8000/api/v1//book", { searchTerm });
+      const response = await axios.post("https://uce-lms-backend.onrender.com/api/v1/book", { searchTerm });
 
       if (!response.data.success) {
         setErrorMessage(response.data.message);
